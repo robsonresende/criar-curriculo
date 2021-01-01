@@ -213,18 +213,21 @@ function criaPDF(){
   /* pode criar uma variável de estilo para o documento */
   var style = '<link rel="stylesheet" type="text/css" href="assets/css/styleResume.css">';
   
+  if (document.getElementById('nome').value == ""){
+          return;
+        } else{
 
-  /* cria um objeto window*/
-  var win = window.open('','','height=29.7cm,width=21.0cm');
+          /* cria um objeto window*/
+          var win = window.open('','','height=29.7cm,width=21.0cm');
 
-  win.document.write('<html><head>');
-  win.document.write('<title>CV Pronto</title>');
-  win.document.write(style);
-  win.document.write('</head>');
-  win.document.write('<body><div id="resume">');
-  win.document.write(meuDoc);
-  win.document.write('</div></body></html>');
-  /*win.print();*/
+          win.document.write('<html><head>');
+          win.document.write('<title>CV Pronto</title>');
+          win.document.write(style);
+          win.document.write('</head>');
+          win.document.write('<body><div id="resume">');
+          win.document.write(meuDoc);
+          win.document.write('</div></body></html>');
+        }
 
 }
 
