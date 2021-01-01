@@ -224,7 +224,28 @@ function criaPDF(){
   win.document.write('<body><div id="resume">');
   win.document.write(meuDoc);
   win.document.write('</div></body></html>');
-  win.print();
+  /*win.print();*/
+
+}
+
+/*********** Open resume in new window without save ***********/
+function openWin()  {
+
+  render.call();
+
+  var myWin;
+
+  myWin = window.open("", "myWin", "height=29.7cm,width=21.0cm");
+
+  /*myWin = document.getElementById('resume').innerHTML;*/
+
+  myWin.document.write('<html><head>');
+  myWin.document.write('<title>CV Pronto</title>');
+  myWin.document.write(style);
+  myWin.document.write('</head>');
+  myWin.document.write('<body><div id="resume">');
+  myWin.document.write(meuDoc);
+  myWin.document.write('</div></body></html>');
 
 }
 
